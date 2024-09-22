@@ -44,3 +44,47 @@ int main() {
 }
 ```
 + 运行截图[![pAMRbAf.png](https://s21.ax1x.com/2024/09/22/pAMRbAf.png)](https://imgse.com/i/pAMRbAf)
+## 基础语法应用
+```
+#include<cstdio>
+int main()
+{
+    int code;
+	printf("Show me your code,please.");
+    scanf("%d",&code);
+    if(code >= 100000 && code <= 999999) printf("I am super hacker!");
+    else printf("Fake code!");
+    return 0;
+}
+```
+## 课后题
+```
+//很有意思的辗转相除法，特意b站搜了下辗转相除法的原理
+#include<stdio.h>
+int main()
+{
+    int m,n,temp;
+    scanf("%d %d",&m,&n);
+    if(m<=n)
+    {
+        while(m!=0)
+        {
+            temp=m;
+            m=n%m;
+            n=temp;
+        }
+        printf("%d",temp);
+    }
+    else
+    {
+        while(n!=0)
+        {
+            temp=n;
+            n=m%n;
+            m=temp;
+        }
+        printf("%d",temp);
+    }
+    return 0;
+}
+```
